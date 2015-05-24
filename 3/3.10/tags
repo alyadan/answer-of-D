@@ -1,0 +1,22 @@
+Delete	list.c	/^void Delete(int x, List L)$/
+DeleteList	list.c	/^void DeleteList( List L)$/
+ElementType	list.h	/^typedef int ElementType;$/
+Find	list.c	/^Position Find(int x, List L)$/
+FindPrevious	list.c	/^Position FindPrevious(ElementType X, List L)$/
+First	list.c	/^Position First(List L)$/
+Header	list.c	/^Position Header(List L)$/
+InitWithArray	list.c	/^List InitWithArray(int *a, int n)$/
+Insert	list.c	/^void Insert(ElementType X, List L, Position P)$/
+IsEmpty	list.c	/^int IsEmpty(List L)$/
+IsLast	list.c	/^int IsLast(Position P, List L)$/
+Last	list.c	/^Position Last(List L)$/
+List	list.h	/^typedef PtrToNode List;$/
+MakeEmpty	list.c	/^List MakeEmpty(List L)$/
+Mmain	main.c	/^int main()$/
+Position	list.h	/^typedef PtrToNode Position;$/
+PositionOfIndex	list.c	/^Position PositionOfIndex(int i, List L)$/
+PrintList	list.c	/^void PrintList(List L)$/
+PrintLots	main.c	/^void PrintLots(List L, List P)$/
+PtrToNode	list.h	/^struct Node;$/
+Swap	list.c	/^int Swap(int i, int j, List L)$/
+SwapPosition	list.c	/^void SwapPosition(Position P1, Position P2, List L/
