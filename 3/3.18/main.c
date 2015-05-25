@@ -10,15 +10,15 @@ int main(int argc, char* argv[])
 	FILE *fp;
 	char str[10000];
 	if(argc != 2){
-		printf("不正确的参数\n");
+		printf("wrong param\n");
 		return 1;
 	}else if(!IsCSource(argv[1])){
-		printf("不是c源码！\n");
+		printf("Not a c source\n");
 		return 2;
 	}
 	
 	if((fp = fopen(argv[1], "r+")))
-		printf("打开成功\n");
+		printf("open success!\n");
 	GetStr(fp, str);
 	Match(str);
 	//printf("%s\n", str);
@@ -102,8 +102,17 @@ void Match(char *str)
 						return;
 					  }
 					  break;
+			case '\'': while(*p++ != '\'')
+					if(*(p-1) == '\\')
+						p++;
+				    break;
+			case '"': while(*p++ != '"')
+					if(*(p-1) == '\\')
+						p++;
+				   break;
 			default: break;
 		}
 	}
+	printf("it's all right!\n");
 }
 
