@@ -2,9 +2,8 @@
 #include "list.h"
 #include <time.h>
 
-Position Search(int n, Position P);
 List Init(int n);
-void PrintLots(List L, List P);
+void reverse(List L);
 int main()
 {
 	time_t t1,t2;
@@ -15,15 +14,14 @@ int main()
 	scanf("%d",&n);
 	L = Init(n);
 	//PrintList(L);
-	printf("please input the element you want search:");
-	scanf("%d",&n);
 
 	t1 = clock();
+		
+	reverse(L);
 
-	if(Search( n, L->Next)){// µÝ¹é°æFind;
-		t2 = clock();
-		printf("find success!through %ld mm\n", (t2-t1)/1000);
-	}
+	t2 = clock();
+	PrintList(L);
+	printf("success!through %ld mm\n", (t2-t1)/1000);
 	return 0;
 }
 
@@ -39,10 +37,15 @@ List Init(int n)
 	return L;
 }
 
-Position Search(int n, Position P)
+void reverse(List L)
 {
-	if(P == NULL || P->Element == n )
-		return P;
-	return Search(n, P->Next);
+	Position Pos, Temp;
+	Pos = L->Next;
+	L->Next = NULL;
+	while(Pos != NULL){
+		Temp = Pos;
+		Pos = Pos->Next;
+		Temp->Next = L->Next;
+		L->Next = Temp;
+	}
 }
-	
