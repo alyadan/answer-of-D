@@ -1,0 +1,12 @@
+CreateStack	stack.c	/^Stack CreateStack(int MaxElements)$/
+DisposeStack	stack.c	/^void DisposeStack(Stack S)$/
+ElementType	stack.h	/^typedef int ElementType;$/
+IsEmpty	stack.c	/^int IsEmpty(Stack S)$/
+IsFull	stack.c	/^int IsFull(Stack S)$/
+MakeEmpty	stack.c	/^void MakeEmpty(Stack S)$/
+Mmain	main.c	/^int main()$/
+Pop	stack.c	/^void Pop(Stack S)$/
+Push	stack.c	/^void Push(ElementType X, Stack S)$/
+Stack	stack.h	/^struct StackRecord;$/
+Top	stack.c	/^ElementType Top(Stack S)$/
+TopAndPop	stack.c	/^ElementType TopAndPop(Stack S)$/
